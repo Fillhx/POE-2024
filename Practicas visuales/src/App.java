@@ -37,53 +37,59 @@ public class App extends JFrame implements ActionListener, ItemListener{
 
     contenedor = getContentPane();
     contenedor.setLayout(new FlowLayout());
+
     etiqueta1 = new JLabel("Eventos");
     // ImageIcon icono = new ImageIcon("Mariposa.jpg");
     etiqueta1.setFont(new Font("Times new roman",Font.BOLD, 20));
     // etiqueta1.setIcon(icono);
     contenedor.add(etiqueta1);
+
     etiqueta2 = new JLabel("2024");
     etiqueta2.setFont(new Font("Times new roman",Font.BOLD, 20));
     contenedor.add(etiqueta2);
+
     campo1 = new JTextField(20);
     campo1.addActionListener(this);
     contenedor.add(campo1);
+
     campo2 = new JPasswordField(20);
     campo2.addActionListener(this);
     contenedor.add(campo2);
+
     boton = new JButton("Aceptar");
     boton.addActionListener(this);
     contenedor.add(boton);
+
     radioboton1 = new JRadioButton("Casado");
     radioboton1.addItemListener(this);
     contenedor.add(radioboton1);
+
     radioboton2 = new JRadioButton("soltero");
     radioboton2.addItemListener(this);
     contenedor.add(radioboton2);
+
     radioboton3 = new JRadioButton("viudo");
     radioboton3.addItemListener(this);
     contenedor.add(radioboton3);
+    
     grupo = new ButtonGroup();
     grupo.add(radioboton1);
     grupo.add(radioboton2);
     grupo.add(radioboton3);
+
     check1 = new JCheckBox("Vivienda");
     contenedor.add(check1);
     check2 = new JCheckBox("Jovenes");
     contenedor.add(check2);
     check3 = new JCheckBox("Viudez");
     contenedor.add(check3);
-    // boton.setEnabled(false); habilitar/inhabilitar el boton
-    
-   
-    
 
+    // boton.setEnabled(false); habilitar/inhabilitar el boton
 
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setSize(600,300);
     setVisible(true);
-
-
+    
     }
 
     @Override
@@ -95,7 +101,6 @@ public class App extends JFrame implements ActionListener, ItemListener{
         }else if (e.getSource() == campo2){
             JOptionPane.showMessageDialog(null, "adios");
         }
-        
     }
 
     @Override
